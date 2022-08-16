@@ -10,7 +10,7 @@ admin_pw="fillmein"
 
 
 @jira_measure("locust_app_specific_action")
-# @run_as_specific_user(username='admin', password='admin')  # run as specific user
+@run_as_specific_user(username='admin', password=admin_pw)  # run as specific user
 def app_specific_action(locust):
 
     issue = random.choice(jira_dataset['issues'])
